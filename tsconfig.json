@@ -10,6 +10,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
+    "resolveJsonModule": true,
     "incremental": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,10 +19,14 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "strictPropertyInitialization": false,
-    "noFallthroughCasesInSwitch": false
-  },
-  "include": [
-    "src/**/*",
-    "test/**/*"
-  ]
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/*":["./src/app/*"],
+      "@helpers/*":["./src/helpers/*"],
+      "@infra/*":["./src/infra/*"],
+      "@test/*":["./test/*"]
+    }
+  }
 }
+
+
